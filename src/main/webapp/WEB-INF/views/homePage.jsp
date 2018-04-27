@@ -12,6 +12,7 @@
 <p><a href="students/xmlToPdf">PDF View from XML String</a></p>
 <p><a href="students/beanToPdfSimple">PDF View from Bean - Simple</a></p>
 <p><a href="students/beanToPdfRich">PDF View from Bean - Rich</a></p>
+<p><a href="students/beanToPdfTest">PDF View from Bean - Test</a></p>
 
 </body>
 </html>

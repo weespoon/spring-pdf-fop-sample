@@ -22,7 +22,7 @@ public class StudentController {
 		model.addAttribute("stud", student);
 		return "studentPage";
 	}
-	
+
 	@ResponseBody
 	@RequestMapping(value = "/xml", produces = "application/xml")
 	public Student xml() {
@@ -38,7 +38,7 @@ public class StudentController {
 
 		return m;
 	}
-	
+
 	@RequestMapping("/beanToPdfSimple")
 	public ModelAndView beanToPdfSimple() {
 		ModelAndView m = new ModelAndView("simpleStudentStyleSheet");
@@ -46,10 +46,18 @@ public class StudentController {
 		m.getModelMap().addAttribute("bean", student);
 		return m;
 	}
-	
+
 	@RequestMapping("/beanToPdfRich")
 	public ModelAndView beanToPdfRich() {
 		ModelAndView m = new ModelAndView("richStudentStyleSheet");
+		student.setName("Braxton Miller");
+		m.getModelMap().addAttribute("bean", student);
+		return m;
+	}
+
+	@RequestMapping("/beanToPdfTest")
+	public ModelAndView beanToPdfTest() {
+		ModelAndView m = new ModelAndView("testStudentStyleSheet");
 		student.setName("Braxton Miller");
 		m.getModelMap().addAttribute("bean", student);
 		return m;
